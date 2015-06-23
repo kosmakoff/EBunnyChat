@@ -1,0 +1,20 @@
+﻿<Window x:Class="EBunnyChat.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="E-Bunny Chat (using RabbitMQ)" Height="350" Width="525" Icon="rabbit.ico">
+    <Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="*" />
+			<RowDefinition Height="Auto" />
+		</Grid.RowDefinitions>
+		<ListBox Grid.Row="0" x:Name="LstChatEntries" />
+		<Grid Grid.Row="1">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*" />
+				<ColumnDefinition Width="Auto" />
+			</Grid.ColumnDefinitions>
+			<TextBox Grid.Column="0" x:Name="TxtTheTextToSend" KeyDown="TxtTheTextToSend_OnKeyDown" />
+			<Button Grid.Column="1" x:Name="BtnSendText" Content="Send" Click="BtnSendText_OnClick" Margin="4" Padding="16,4" />
+		</Grid>
+	</Grid>
+</Window>
